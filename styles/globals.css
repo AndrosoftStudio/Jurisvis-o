@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0b1020;
+  --fg: #e6e8f2;
+  --muted: #98a2b3;
+  --card: #12172a;
+  --accent: #7c3aed;
+  --accent-2: #22c55e;
+  --border: #1e2238;
+}
+html, body { height: 100%; }
+body {
+  @apply bg-[var(--bg)] text-[var(--fg)] antialiased;
+}
+.container {
+  @apply max-w-6xl mx-auto px-4 md:px-6 lg:px-8;
+}
+.card { @apply bg-[var(--card)] rounded-2xl shadow-lg border border-[var(--border)]; }
+.btn {
+  @apply inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-[var(--border)] bg-[var(--card)] hover:bg-slate-800 transition;
+}
+.pill { @apply inline-flex items-center text-xs px-2 py-1 rounded-full bg-slate-800 border border-[var(--border)] text-slate-200; }
+.grid-codes { @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6; }
+.sidebar { @apply w-full md:w-80 bg-[var(--card)] border border-[var(--border)] rounded-2xl p-3 md:p-4 h-[calc(100vh-160px)] overflow-y-auto; }
+.article { @apply flex-1 bg-[var(--card)] border border-[var(--border)] rounded-2xl p-5 min-h-[300px]; }
+.breadcrumb { @apply text-sm text-[var(--muted)] mb-4; }
+.inciso { @apply pl-2 border-l-2 border-slate-700 my-2; }
+.alinea { @apply pl-4 border-l-2 border-slate-800 my-1; }
+.paragrafo { @apply pl-2 italic text-slate-200 my-2; }
